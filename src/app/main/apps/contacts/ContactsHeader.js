@@ -48,7 +48,7 @@ function ContactsHeader(props) {
 				<ThemeProvider theme={mainTheme}>
 					
 					<FuseAnimate animation="transition.slideLeftIn" delay={300}>
-						
+						<Clock />
 						<Paper
 							className="flex p-4 items-center w-full max-w-512 h-48 px-8 py-4 rounded-8"
 							elevation={1}
