@@ -22,10 +22,10 @@ function MailAppHeader(props) {
 					<div className="h1 w-full">
 						Notice
 					</div>
-				<Paper
+				{/* <Paper
 					className="flex items-center w-full h-48 sm:h-56 p-16 ltr:pl-4 lg:ltr:pl-16 rtl:pr-4 lg:rtl:pr-16 rounded-8"
 					elevation={1}
-				>
+				> */}
 					{/* 화면이 작아질경우 생겨나는 메뉴용 아이콘 기능상 필요가 없어서 주석처리 */}
 					{/* <Hidden lgUp>
 						<IconButton
@@ -38,7 +38,7 @@ function MailAppHeader(props) {
 
 					
 
-					<Icon color="action">search</Icon>
+					{/* <Icon color="action">search</Icon>
 
 					<Input
 						placeholder={t('SEARCH_PLACEHOLDER')}
@@ -51,7 +51,7 @@ function MailAppHeader(props) {
 						}}
 						onChange={ev => dispatch(setMailsSearchText(ev))}
 					/>
-				</Paper>
+				</Paper> */}
 			</div>
 		</ThemeProvider>
 	);

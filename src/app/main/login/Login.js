@@ -12,6 +12,11 @@ import { Link } from 'react-router-dom';
 import Auth0LoginTab from './tabs/Auth0LoginTab';
 import FirebaseLoginTab from './tabs/FirebaseLoginTab';
 import JWTLoginTab from './tabs/JWTLoginTab';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -30,6 +35,7 @@ const useStyles = makeStyles(theme => ({
 		color: theme.palette.primary.contrastText
 	}
 }));
+  
 
 function Login() {
 	const classes = useStyles();
@@ -38,6 +44,10 @@ function Login() {
 	function handleTabChange(event, value) {
 		setSelectedTab(value);
 	}
+	  const [age, setAge] = React.useState('');
+	  const handleChange = (event) => {
+		setAge(event.target.value);
+	  };
 
 	return (
 		<div
@@ -58,22 +68,42 @@ function Login() {
 					>
 						<CardContent className="flex flex-col items-center justify-center w-full py-55 max-w-320">
 							<FuseAnimate delay={300}>
-								<div className="flex items-center mb-32">
-									<img className="logo-icon w-48" src="assets/images/logos/fuse.svg" alt="logo" />
-									<div className="border-l-1 mr-4 w-1 h-40" />
+								<div className="flex items-center mb-25">
+									<img className="logo-icon w-25" src="assets/images/logos/user_register_logo.png" alt="logo" />
+									{/* <div className="border-l-1 mr-4 w-1 h-40" />
 									<div>
 										<Typography className="text-24 font-800 logo-text" color="inherit">
 											HICARE
 										</Typography>
-										{/* <Typography
+										<Typography
 											className="text-16 tracking-widest -mt-8 font-700"
 											color="textSecondary"
 										>
 											REACT
-										</Typography> */}
-									</div>
+										</Typography>
+									</div> */}
 								</div>
+								
+								
 							</FuseAnimate>
+							<div className="flax flax-col  justify-right">
+							<FormControl className={classes.formControl}>
+								<Select
+								value={age}
+								onChange={handleChange}
+								displayEmpty
+								className={classes.selectEmpty}
+								inputProps={{ 'aria-label': 'Without label' }}
+								>
+								<MenuItem value="">
+									<em>English(US)</em>
+								</MenuItem>
+								<MenuItem value={10}>Korean</MenuItem>
+								<MenuItem value={20}>Italian</MenuItem>
+								</Select>
+								<br />
+							</FormControl>
+							</div>
 
 							{/* <Tabs
 								value={selectedTab}

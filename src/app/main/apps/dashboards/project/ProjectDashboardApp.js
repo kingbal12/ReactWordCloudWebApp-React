@@ -123,56 +123,10 @@ function ProjectDashboardApp(props) {
 							</IconButton>
 						</Hidden>
 					</div>
-					{/* <div className="flex items-end">
-						<div className="flex items-center">
-							<div className={clsx(classes.selectedProject, 'flex items-center h-40 px-16 text-16')}>
-								{_.find(projects, ['id', selectedProject.id]).name}
-							</div>
-							<IconButton
-								className={clsx(classes.projectMenuButton, 'h-40 w-40 p-0')}
-								aria-owns={selectedProject.menuEl ? 'project-menu' : undefined}
-								aria-haspopup="true"
-								onClick={handleOpenProjectMenu}
-							>
-								<Icon>more_horiz</Icon>
-							</IconButton>
-							<Menu
-								id="project-menu"
-								anchorEl={selectedProject.menuEl}
-								open={Boolean(selectedProject.menuEl)}
-								onClose={handleCloseProjectMenu}
-							>
-								{projects &&
-									projects.map(project => (
-										<MenuItem
-											key={project.id}
-											onClick={ev => {
-												handleChangeProject(project.id);
-											}}
-										>
-											{project.name}
-										</MenuItem>
-									))}
-							</Menu>
-						</div>
-					</div> */}
+					{}
 				</div>
 			}
-			// contentToolbar={
-			// 	<Tabs
-			// 		value={tabValue}
-			// 		onChange={handleChangeTab}
-			// 		indicatorColor="secondary"
-			// 		textColor="secondary"
-			// 		variant="scrollable"
-			// 		scrollButtons="off"
-			// 		className="w-full px-24"
-			// 	>
-			// 		<Tab className="text-14 font-600 normal-case" label="Home" />
-			// 		<Tab className="text-14 font-600 normal-case" label="Budget Summary" />
-			// 		<Tab className="text-14 font-600 normal-case" label="Team Members" />
-			// 	</Tabs>
-			// }
+			
 			content={
 				<div className="p-12">
 					{tabValue === 0 && (
@@ -191,67 +145,15 @@ function ProjectDashboardApp(props) {
 							<div className="widget flex w-full sm:w-1/2 md:w-1/3 p-12">
 								<Widget3 widget={widgets.widget3} />
 							</div>
-							{/* <div className="widget flex w-full sm:w-1/2 md:w-1/4 p-12">
-								<Widget4 widget={widgets.widget4} />
-							</div>
-							<div className="widget flex w-full p-12">
-								<Widget5 widget={widgets.widget5} />
-							</div>
-							<div className="widget flex w-full sm:w-1/2 p-12">
-								<Widget6 widget={widgets.widget6} />
-							</div> */}
+							{}
 							<div className="widget flex w-full p-12">
 								<Widget7 widget={widgets.widget7} />
 							</div>
 						</FuseAnimateGroup>
 					)}
-					{/* {tabValue === 1 && (
-						<FuseAnimateGroup
-							className="flex flex-wrap"
-							enter={{
-								animation: 'transition.slideUpBigIn'
-							}}
-						>
-							<div className="widget flex w-full sm:w-1/2 p-12">
-								<Widget8 widget={widgets.widget8} />
-							</div>
-							<div className="widget flex w-full sm:w-1/2 p-12">
-								<Widget9 widget={widgets.widget9} />
-							</div>
-							<div className="widget flex w-full p-12">
-								<Widget10 widget={widgets.widget10} />
-							</div>
-						</FuseAnimateGroup>
-					)}
-					{tabValue === 2 && (
-						<FuseAnimateGroup
-							className="flex flex-wrap"
-							enter={{
-								animation: 'transition.slideUpBigIn'
-							}}
-						>
-							<div className="widget flex w-full p-12">
-								<Widget11 widget={widgets.widget11} />
-							</div>
-						</FuseAnimateGroup>
-					)} */}
+					{}
 				</div>
 			}
-			// rightSidebarContent={
-			// 	<FuseAnimateGroup
-			// 		className="w-full"
-			// 		enter={{
-			// 			animation: 'transition.slideUpBigIn'
-			// 		}}
-			// 	>
-			// 		<div className="widget w-full p-12">
-			// 			<WidgetNow />
-			// 		</div>
-			// 		<div className="widget w-full p-12">
-			// 			<WidgetWeather widget={widgets.weatherWidget} />
-			// 		</div>
-			// 	</FuseAnimateGroup>
-			// }
 			ref={pageLayout}
 		/>
 	);
