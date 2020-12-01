@@ -48,7 +48,7 @@ function ContactsHeader(props) {
 				<ThemeProvider theme={mainTheme}>
 					
 					<FuseAnimate animation="transition.slideLeftIn" delay={300}>
-						{/* <Clock /> */}
+						<Clock />
 						{/* 무슨일인지는 몰라도 깃하브에 연동시키니 시계를 활성화하면 화면이 까맣게 나옴 */}
 						<Paper
 							className="flex p-4 items-center w-full max-w-512 h-48 px-8 py-4 rounded-8"
